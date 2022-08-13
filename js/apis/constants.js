@@ -1,0 +1,12 @@
+const constants = {
+  API_KEY_TOMORROW: "co52t0Ralo2osJC2xpNgnDYTG5FIkNb9",
+  API_KEY_BUTTUTA: "e30b0972f0bfb762ec707f941c34b282",
+  API_KEY_BIGDATA: "bdc_3d26f4dd1e7c4e01b249eda2aaba160e",
+  API_KEY_OPENWEATHER: "42a55e5af852e00d019ac6180b650aba",
+  API_KEY_ACCUWEATHER: "0oODEgjuocMmOzIXXcVo6V8O34QUhW8A",
+  API_KEY_WEATHERSTACK: "bf0aac83cf9adebbd9045e5b593c991e",
+  API_KEY_STORMGLASS: "089310e8-1616-11ed-b697-0242ac130002-08931156-1616-11ed-b697-0242ac130002",
+  API_KEY_SOFAR: "3e1c9d8ad5409cdc67bc89dcd8757a",
+};
+const freezedConst = Object.freeze(constants);
+export default freezedConst;

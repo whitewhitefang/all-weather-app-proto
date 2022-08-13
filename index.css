@@ -1,0 +1,286 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  --main-bg-color: hsl(210, 100%, 75%);
+  --addition-bg-color: hsl(210, 100%, 4%);
+  --shadows-color: hsl(210, 100%, 24%);
+  --accent-color: hsl(210, 100%, 46%);
+}
+
+html {
+  height: 100%;
+}
+
+.container {
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: row;
+}
+
+.area-and-map {
+  width: 60%;
+  height: 100vh;
+  border-right: 1px solid var(--shadows-color);
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.area-and-map>h1 {
+  color: white;
+  text-align: center;
+}
+
+#map {  
+  height: 100%;
+  border-radius: 5px;
+}
+
+.container-content {
+  width: 100%;
+}
+
+.container-content>h1 {
+  text-align: center;
+}
+
+.average-weather {
+  padding: 2% 2%;
+  width: 66%;  
+}
+
+.average-weather img {
+  width: 68px;
+}
+
+.card-average { 
+  margin: 8% auto 0;
+  width: 70%;  
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-average>div {
+  width: 50%
+}
+.container-content-weather {
+  padding: 2% 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;  
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  background-color: var(--main-bg-color);
+}
+
+.card-weather {
+  border: 2px solid var(--addition-bg-color);
+  border-radius: 10px;
+  box-shadow: 6px 4px 5px var(--shadows-color);
+  padding: 1%;
+  margin-bottom: 15px;
+  background-color: white;
+  font-size: 1.1rem;
+  flex-basis: 22%;
+}
+
+.card-weather:hover {
+  transform: scale(1.02);
+  box-shadow: 8px 5px 6px var(--shadows-color);
+  transition: all .3s ease-in;
+}
+
+.card-weather-APIname {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.card-weather-sky, .card-weather-temp, .card-weather-humid, .card-weather-wind, .card-weather-waveHeight, .card-weather-wave, .card-weather-waterTemp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+img {
+  width: 40px;
+}
+
+.city-name-area-container {
+  height: 19%;
+}
+
+.city-name-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 10%;  
+}
+
+#search {
+  width: 38%;
+  margin-left: 2%;
+  margin-right: 1%;
+  padding-left: 2%;
+  border-radius: 8px;
+  box-shadow: 1px 2px 2px 1px var(--shadows-color) inset;  
+  font-size: 1.8rem;
+}
+
+button {
+  font-size: 1.8rem;
+  border-radius: 8px;
+  background-color: var(--accent-color);
+  box-shadow: 5px 5px 7px var(--shadows-color);
+}
+
+.city-name-button--search {
+  background-color: var(--main-bg-color);
+}
+
+.city-name-button--show {
+  font-weight: bold;
+}
+
+button:hover {
+  box-shadow: 7px 7px 9px var(--shadows-color);
+  color: var(--shadows-color);
+}
+
+button:active {
+  box-shadow: 5px 5px 7px var(--shadows-color);
+  color: black;
+}
+
+.panel {
+  margin-top: 14px;
+}
+
+.panel-slider {
+  padding: 5px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.panel-slider-option {
+  display: flex;
+  flex-flow: column;
+}
+
+.slider-badge {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  padding: 2px;
+  font-size: 1.1rem;
+  vertical-align: text-top;
+}
+
+.panel-select {
+  width: 40%;
+  padding-top: 30px;
+  margin: 20px 3% 0 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  
+  font-size: 1.2rem;
+}
+
+.panel-select>div {
+  margin-top: 16px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--shadows-color);
+}
+
+.range {
+  width: 84%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.range-labels {
+  width: 102%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.range-range {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: -15px;
+}
+
+.range-range>input {
+  width: 88%;
+  margin: 0 auto;
+}
+
+.range-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  max-height: fit-content;
+}
+
+.range-label>p {
+  margin: 0;
+  padding: 0;
+}
+
+datalist {
+  display: none;
+}
+
+.api-error {
+  text-align: center;
+  margin: 40px 0 60px 0;  
+}
+
+.api-error>img {
+  width: 60%;
+}
+
+.average-weather-and-selectors {
+  padding-top: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+}
+
+.modal {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  z-index: 999;
+  background-color: azure;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

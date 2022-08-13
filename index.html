@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="http-equive" content="x-ua-compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
+    <link rel="stylesheet" href="index.css" />  
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>  
+    <title>weatherall</title>
+  </head>
+  <body>
+    <div class="container">   
+      <div class="area-and-map">
+        <div class="city-name-area-container">
+          <div class="city-name-area"> 
+            <form name="search">
+              <input type="search" id="search" name="searchCity" value="" placeholder="Your city is" />  
+              <button type="button" class="city-name-button--search">Search</button>
+              <button type="button" class="city-name-button--show">Show weather</button> 
+            </form>              
+          </div>     
+        </div>      
+        <div id="map"></div>
+      </div>
+      <div class="container-content">
+        <div class="panel">
+          <form>
+            <div class="panel-slider">
+              <div class="range">
+                <div class="range-range">
+                  <input type="range" name="forecast" list="dates" step="1" min="1" max="3" value="1" />
+                </div>
+                <div class="range-labels">
+                  <div class="range-label">
+                    <p>Now</p>
+                    <p class="slider-date-now slider-badge"></p>
+                  </div>
+                  <div class="range-label">
+                    <p>Today</p>
+                    <p class="slider-date-now slider-badge"></p>
+                  </div>
+                  <div class="range-label">
+                    <p>Tomorrow</p>
+                    <p class="slider-date-tomorrow slider-badge"></p>
+                  </div>
+                </div>
+              </div>              
+              <datalist id="dates">
+                <option value="1" label="Now">Now</option>
+                <option value="2" label="Today">Today</option>
+                <option value="3" label="Tomorrow">Tomorrow</option>
+              </datalist>              
+            </div>
+          </form>
+        </div>
+        <div class="average-weather-and-selectors">
+          <div class="average-weather"></div>
+          <div class="panel-select">
+            <div>
+              <label for="accuWeather">Accu Weather</label>
+              <input type="checkbox" id="accuWeather" name="AccuWeather" value="checked" checked="true" />
+            </div>
+            <div>
+              <label for="openWeather">Open Weather</label>
+              <input type="checkbox" id="openWeather" name="OpenWeather" value="checked" checked="true" />
+            </div>
+            <div>
+              <label for="tomorrowIo">tomorrow.io</label>
+              <input type="checkbox" id="tomorrowIo" name="TomorrowIo" value="checked" checked="true" />
+            </div>
+            <div>
+              <label for="weatherStack">Weather Stack</label>
+              <input type="checkbox" id="weatherStack" name="WeatherStack" value="checked" checked="true" />
+            </div>   
+            <div>
+              <label for="stormGlass">Storm Glass</label>
+              <input type="checkbox" id="stormGlass" name="StormGlass" value="checked" checked="true" />
+            </div>            
+          </div>
+        </div>             
+        <div class="container-content-weather"></div>   
+      </div>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+    <noscript>Your browser needs to support JavaScript</noscript>    
+  </body>
+</html>
